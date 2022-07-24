@@ -4,13 +4,12 @@ def geometric_progression(start: int, q: int, length: int):
     while count < length:
         tmp = yield start
         if tmp == 'stop':
-            print('stopped')
-            break
+            return
         start *= q
         count += 1
     return
 
-x = geometric_progression(3, 5, 6)
+x = geometric_progression(1, 2, 100)
 
 for item in x:
     print(item)
